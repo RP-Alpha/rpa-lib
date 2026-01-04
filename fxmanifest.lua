@@ -15,7 +15,10 @@ client_scripts {
     'client/main.lua',
     'client/target.lua'
 }
-server_script 'server/main.lua'
+server_scripts {
+    'server/main.lua',
+    'server/permissions.lua'
+}
 
 lua54 'yes'
 
@@ -37,5 +40,17 @@ exports {
 server_exports {
     'GetFramework',
     'GetFrameworkName',
-    'Notify'
+    'Notify',
+    -- Permission exports
+    'HasPermission',
+    'IsAdmin',
+    'IsModerator',
+    'IsDeveloper',
+    'HasGroup',
+    'HasJob',
+    'IsOnDuty',
+    'GetPlayerGroup',
+    'GetPlayerJob',
+    'CheckConvarPermission',
+    'GetPlayerPermissionInfo'
 }
