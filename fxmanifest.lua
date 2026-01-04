@@ -19,11 +19,23 @@ server_script 'server/main.lua'
 
 lua54 'yes'
 
+-- Client-side exports
 exports {
     'GetFramework',
     'GetFrameworkName',
     'AddTargetModel',
     'AddTargetZone',
     'AddGlobalVehicle',
-    'RemoveZone'
+    'RemoveZone',
+    'Notify',
+    'TextUI',
+    'HideTextUI',
+    'Teleport'
+}
+
+-- Server-side exports
+server_exports {
+    'GetFramework',
+    'GetFrameworkName',
+    'Notify'
 }
